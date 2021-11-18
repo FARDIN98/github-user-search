@@ -1,0 +1,299 @@
+/* ========== Google Fonts ========== */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700&display=swap');
+
+/* ========== Variables CSS ========== */
+:root {
+    /* ===== Color ===== */
+    --body-color: #F5F8FF;
+    --body-container: #FEFEFE;
+    --text-color: #2B3442;
+    --text-color-alt: #4B6A9B;
+    --btn-bg-color: #0477FE;
+
+
+
+    /* ===== Fonts and typography ===== */
+    --body-font: 'Exo', sans-serif;
+
+    /* ===== Font weight ===== */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+    /* ===== */
+    /* ===== Margin ===== */
+    --mb-0-5: .5rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+
+}
+
+/* ========== Variable For Dark Theme =========== */
+body.dark-theme {
+    --body-color: #141C2F;
+    --body-container: #1F2A48;
+    --text-color: #fff;
+    --text-color-alt: #fff;
+    --btn-bg-color: #0477FE;
+}
+
+/* ========== Base ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-light);
+    position: relative;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ========== Reuseable CSS classes ========= */
+.container {
+    padding: 1rem 1.5rem;
+    min-width: 360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex {
+    display: flex;
+}
+
+.col-gap {
+    gap: .5rem;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+/* ========== Title ========== */
+.head__title {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mb-1-25);
+}
+
+.head__title-text {
+    color: var(--text-color);
+}
+
+.head__title-theme {
+    font-size: 12px;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: var(--font-regular);
+}
+
+#theme-name {
+    text-transform: uppercase;
+}
+
+#theme-button {
+    margin-left: .5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 100%;
+    padding: .1rem;
+    cursor: pointer;
+}
+
+/* ========== Search =========== */
+.search {
+    position: relative;
+}
+
+.search__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 .5rem;
+    color: var(--text-color-alt);
+    font-size: 25px;
+    font-weight: var(--font-bold);
+}
+
+.search__box {
+    width: 100%;
+    padding: 1rem 6rem 1rem 2.5rem;
+    background-color: var(--body-container);
+    border-radius: 10px;
+    color: var(--text-color);
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+.search__btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--btn-bg-color);
+    color: #F5F8FF;
+    font-weight: var(--font-bold);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* ========== Profile ========== */
+.profile {
+    margin-top: var(--mb-1);
+    border-radius: 10px;
+    background-color: var(--body-container);
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+.profile__info {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: var(--mb-1);
+}
+
+.profile__avatar {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile__title h2 {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.profile__user {
+    color: var(--btn-bg-color);
+    font-size: 12px;
+    font-weight: var(--font-medium);
+}
+
+.profile__join {
+    color: var(--text-color-alt);
+    font-size: 12px;
+}
+
+.profile__bio {
+    text-align: justify;
+    line-height: 1.5rem;
+    color: var(--text-color-alt);
+    font-size: 14px;
+    font-weight: var(--font-regular);
+}
+
+.profile__data {
+    justify-content: space-between;
+    text-align: center;
+    margin: var(--mb-1) 0;
+    background-color: var(--body-color);
+    border-radius: 10px;
+    padding: 1rem;
+    color: var(--text-color-alt);
+}
+
+.profile__data div p {
+    font-size: 14px;
+}
+
+.profile__data div span {
+    color: var(--text-color);
+    font-weight: var(--font-bold);
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+.profile__professional {
+    grid-template-rows: repeat(4, 1fr);
+    gap: .7rem 0;
+    color: var(--text-color);
+}
+
+.profile__professional div p {
+    color: var(--text-color-alt);
+    font-size: 14px;
+    font-weight: var(--font-regular);
+}
+
+/* ========== Media Queries ========== */
+@media screen and (max-width: 567px) {
+    body {
+        min-height: 650px;
+    }
+}
+
+@media screen and (min-width: 568px) {
+    .container {
+        min-width: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .profile__info {
+        position: relative;
+    }
+
+    .profile__avatar {
+        width: 15%;
+    }
+
+    #profile-title-name {
+        font-size: 25px;
+    }
+
+    .profile__join {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 14px;
+    }
+
+    .profile__user {
+        font-size: 14px;
+    }
+
+    .profile__bio {
+        position: relative;
+        width: calc(85% - 1rem);
+        left: calc(15% + 1rem);
+    }
+
+    .profile__data {
+        position: relative;
+        width: calc(85% - 1rem);
+        left: calc(15% + 1rem);
+    }
+
+    .profile__professional {
+        position: relative;
+        width: calc(85% - 1rem);
+        left: calc(15% + 1rem);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

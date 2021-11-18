@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GitHub Usear Search - By using github api it can show any user information">
+    <meta name="keywords" content="GitHub, Github User, GitHub profile">
+    <meta name="author" content="Md Rakib Hasan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== BOX ICON ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- ========== CSS ========== -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Github User Search</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ========== Title Section ========== -->
+        <section class="head__title flex">
+            <h1 class="head__title-text">Devfinder</h1>
+            <div class="head__title-theme">
+                <span id="theme-name">DARK</span>
+                <i class='bx bxs-moon' id="theme-button"></i>
+            </div>
+        </section>
+
+        <!-- ========== Search ========== -->
+        <section class="search">
+            <i class='search__icon bx bx-search'></i>
+            <input id="get_user-name" class="search__box" type="text" placeholder="Search GitHub username... ">
+            <button id="search-btn" class="search__btn">Search</button>
+        </section>
+
+        <!-- ========== Profile Section ========== -->
+        <section class="profile">
+            <section class="profile__info flex">
+                <img alt="" class="profile__avatar" id="profile-avatar" src="#">
+                <div class="profile__title">
+                    <h2 id="profile-title-name"></h2>
+                    <p class="profile__user">@<span id="profile__user-name"></span></p>
+                    <p class="profile__join">Joined <span id="profile__user-joindate"></span></p>
+                </div>
+            </section>
+
+            <p class="profile__bio">
+            </p>
+
+            <div class="profile__data flex">
+                <div>
+                    <p>Repos</p>
+                    <span id="total-repos"></span>
+                </div>
+                <div>
+                    <p>Followers</p>
+                    <span id="total-followers"></span>
+                </div>
+                <div>
+                    <p>Following</p>
+                    <span id="total-following"></span>
+                </div>
+            </div>
+
+            <section class="profile__professional grid">
+                <div class="flex col-gap">
+                    <i class='bx bx-current-location'></i>
+                    <p id="user-location"></p>
+                </div>
+                <div class="flex col-gap">
+                    <i class='bx bx-link'></i>
+                    <p id="user-blog"></p>
+                </div>
+                <div class="flex col-gap">
+                    <i class='bx bxl-twitter'></i>
+                    <p id="user-twitter-id"></p>
+                </div>
+                <div class="flex col-gap">
+                    <i class='bx bxs-buildings'></i>
+                    <p id="user-company"></p>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <!-- ========== AXIOS JS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- ========== JS ========== -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
